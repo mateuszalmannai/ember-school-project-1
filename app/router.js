@@ -6,6 +6,7 @@ const Router = Ember.Router.extend({
   rootURL: config.rootURL
 });
 
+// Hey, I'm a comment
 Router.map(function() {
 });
 
