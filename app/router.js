@@ -8,6 +8,7 @@ const Router = Ember.Router.extend({
 
 // Hey, I'm a comment
 // Hey, I'm in the branch!
+// Another comment!
 Router.map(function() {
 });
 
