@@ -5,9 +5,11 @@ export default Ember.Controller.extend({
   actions: {
     makeUnavailable(food){
       Ember.set(food, 'isAvailable', false);
+      food.save();
     },
     makeAvailable(food){
-      Ember.set(food, 'isAvailable', true)
+      Ember.set(food, 'isAvailable', true);
+      food.save();
     }
   }
 });
