@@ -1,12 +1,19 @@
 <h1>Menu Tracker</h1>
 <p>Our restaurant is {{restaurant.name}}. We've been open for {{restaurant.yearsOpen}} year(s).</p>
 <p id="explanation">Menu tracker helps you see what dishes are available today!</p>
+
 <ul>
   {{#each foods as |food|}}
     {{#if food.isAvailable}}
-      <li>{{food.name}}!</li>
+      <li>
+        {{food.name}}!
+        <button {{action 'makeUnavailable' food}}>Make Unavailable</button>
+      </li>
     {{else}}
-      <li class="not-available">{{food.name}}</li>
+      <li class="not-available">
+        {{food.name}}
+        <button {{action 'makeAvailable' food}}>Make Available</button>
+      </li>
     {{/if}}
   {{/each}}
 </ul>

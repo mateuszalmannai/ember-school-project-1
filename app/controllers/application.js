@@ -8,5 +8,13 @@ export default Ember.Controller.extend({
     {name: 'Vegetables', isAvailable: true},
     {name: 'Fruit Smoothies', isAvailable: false}
   ],
-  restaurant: {name: 'Our Awesome Restaurant', yearsOpen: 1}
+  restaurant: {name: 'Our Awesome Restaurant', yearsOpen: 1},
+  actions: {
+    makeUnavailable(food){
+      Ember.set(food, 'isAvailable', false);
+    },
+    makeAvailable(food){
+      Ember.set(food, 'isAvailable', true)
+    }
+  }
 });
