@@ -1,7 +1,10 @@
 <h1>Menu Tracker</h1>
+<p>Our restaurant is {{restaurant.name}}. We've been open for {{restaurant.yearsOpen}} year(s).</p>
 <p>Menu tracker helps you see what dishes are available today!</p>
 <ul>
   {{#each foods as |food|}}
-    <li>Let's eat some {{food}}!</li>
+    <li>Let's eat some {{food.name}}! Currently available: {{food.isAvailable}}</li>
   {{/each}}
 </ul>
+<hr>
+{{input value=restaurant.name}}
