@@ -1,6 +1,5 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  name: 'Ember',
-  greeting: 'Salutations'
+  foods: ['Tacos', 'Salad', 'Pizza', 'Vegetables', 'Fruit Smoothies']
 });

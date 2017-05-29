@@ -1,6 +1,7 @@
-<h1>{{greeting}}!</h1>
-<p>We're customizing a page!</p>
-<p>My name is <strong>{{name}}</strong></p>
-<hr>
-{{input value=greeting}}
-{{input value=greeting}}
+<h1>Menu Tracker</h1>
+<p>Menu tracker helps you see what dishes are available today!</p>
+<ul>
+  {{#each foods as |food|}}
+    <li>Let's eat some {{food}}!</li>
+  {{/each}}
+</ul>
