@@ -3,7 +3,11 @@
 <p>Menu tracker helps you see what dishes are available today!</p>
 <ul>
   {{#each foods as |food|}}
-    <li>Let's eat some {{food.name}}! Currently available: {{food.isAvailable}}</li>
+    {{#if food.isAvailable}}
+      <li>{{food.name}}!</li>
+    {{else}}
+      <li><s>{{food.name}}</s></li>
+    {{/if}}
   {{/each}}
 </ul>
 <hr>
