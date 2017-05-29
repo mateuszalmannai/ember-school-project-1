@@ -3,7 +3,7 @@
 <p id="explanation">Menu tracker helps you see what dishes are available today!</p>
 
 <ul>
-  {{#each foods as |food|}}
+  {{#each model as |food|}}
     {{#if food.isAvailable}}
       <li>
         {{food.name}}!
