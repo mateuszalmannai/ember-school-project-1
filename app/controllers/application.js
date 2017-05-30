@@ -16,9 +16,14 @@ export default Ember.Controller.extend({
       this.store.createRecord('food', {
         isAvailable: false,
         name: this.get('newItem')
+        // call save() to propagate to the server
       }).save();
       // Clear input field
       this.set('newItem', '');
+    },
+    destroyItem(food){
+      // saves automatically
+      food.destroyRecord();
     }
   }
 });
