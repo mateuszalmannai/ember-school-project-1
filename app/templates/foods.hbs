@@ -1,6 +1,6 @@
 <h1>Menu Tracker</h1>
 <p>Our restaurant is {{restaurant.name}}. We've been open for {{restaurant.yearsOpen}} year(s).</p>
-<p id="explanation">Menu tracker helps you see what dishes are available today. {{link-to 'Learn more about us!' 'about'}}</p>
+<p id="explanation">Menu tracker helps you see what dishes are available today.</p>
 <p>{{menuLength}} foods total</p>
 <p>{{availableItems.length}} foods available</p>
 <ul>
@@ -23,4 +23,3 @@
 {{input value=newItem}}
 <button {{action 'saveNewItem'}}>Save</button>
 
-{{link-to 'Contact us' 'contact'}}
