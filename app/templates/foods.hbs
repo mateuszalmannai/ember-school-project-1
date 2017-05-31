@@ -1,25 +1,32 @@
-<h1>Menu Tracker</h1>
-<p>Our restaurant is {{restaurant.name}}. We've been open for {{restaurant.yearsOpen}} year(s).</p>
-<p id="explanation">Menu tracker helps you see what dishes are available today.</p>
-<p>{{menuLength}} foods total</p>
-<p>{{availableItems.length}} foods available</p>
-<ul>
-  {{#each model as |food|}}
-    {{#if food.isAvailable}}
-      <li>
-        {{food.name}}!
-        <button {{action 'makeUnavailable' food}}>Make Unavailable</button>
-      </li>
-    {{else}}
-      <li class="not-available">
-        {{food.name}}
-        <button {{action 'makeAvailable' food}}>Make Available</button>
-        <button {{action 'destroyItem' food}}>Destroy</button>
-      </li>
-    {{/if}}
-  {{/each}}
-</ul>
-<hr>
-{{input value=newItem}}
-<button {{action 'saveNewItem'}}>Save</button>
+<div class="flex-container">
+  <div class="flex-item">
+    <h1>Menu Tracker</h1>
+    <p>Our restaurant is {{restaurant.name}}. We've been open for {{restaurant.yearsOpen}} year(s).</p>
+    <p id="explanation">Menu tracker helps you see what dishes are available today.</p>
+    <p>{{menuLength}} foods total</p>
+    <p>{{availableItems.length}} foods available</p>
+    <ul>
+      {{#each model as |food|}}
+        {{#if food.isAvailable}}
+          <li>
+            {{#link-to 'foods.food' food.id}}{{food.name}}{{/link-to}}
+            <button {{action 'makeUnavailable' food}}>Make Unavailable</button>
+          </li>
+        {{else}}
+          <li class="not-available">
+            {{food.name}}
+            <button {{action 'makeAvailable' food}}>Make Available</button>
+            <button {{action 'destroyItem' food}}>Destroy</button>
+          </li>
+        {{/if}}
+      {{/each}}
+    </ul>
+    <hr>
+    {{input value=newItem}}
+    <button {{action 'saveNewItem'}}>Save</button>
+  </div>
+  <div class="flex-item">
+    {{outlet}}
+  </div>
+</div>
 

@@ -10,7 +10,9 @@ const Router = Ember.Router.extend({
 // Hey, I'm in the branch!
 // Another comment!
 Router.map(function() {
-  this.route('foods');
+  this.route('foods', function(){
+    this.route('food', {path: ':food_id'});
+  });
   this.route('about');
   this.route('contact');
 });
