@@ -22,10 +22,6 @@ export default Ember.Controller.extend({
       }).save();
       // Clear input field
       this.set('newItem', '');
-    },
-    destroyItem(food){
-      // saves automatically
-      food.destroyRecord();
     }
   }
 });
