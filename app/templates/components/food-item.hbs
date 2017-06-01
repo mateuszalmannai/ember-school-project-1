@@ -1,0 +1,8 @@
+<li class="{{if food.isAvailable '' 'not-available'}}">
+  {{#link-to 'foods.food' food.id}}{{food.name}}{{/link-to}}!
+  {{#if food.isAvailable}}
+    <button {{action 'makeUnavailable' food}}>Make Unavailable</button>
+  {{else}}
+    <button {{action 'makeAvailable' food}}>Make Available</button>
+  {{/if}}
+</li>

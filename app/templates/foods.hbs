@@ -7,14 +7,7 @@
     <p>{{availableItems.length}} foods available</p>
     <ul>
       {{#each model as |food|}}
-        <li class="{{if food.isAvailable '' 'not-available'}}">
-          {{#link-to 'foods.food' food.id}}{{food.name}}{{/link-to}}!
-          {{#if food.isAvailable}}
-            <button {{action 'makeUnavailable' food}}>Make Unavailable</button>
-          {{else}}
-            <button {{action 'makeAvailable' food}}>Make Available</button>
-          {{/if}}
-        </li>
+        {{food-item food=food}}
       {{/each}}
     </ul>
     <hr>

@@ -6,14 +6,6 @@ export default Ember.Controller.extend({
   menuLength: Ember.computed.alias('model.length'),
   availableItems: Ember.computed.filterBy('model','isAvailable', true),
   actions: {
-    makeUnavailable(food){
-      Ember.set(food, 'isAvailable', false);
-      food.save();
-    },
-    makeAvailable(food){
-      Ember.set(food, 'isAvailable', true);
-      food.save();
-    },
     saveNewItem(){
       this.store.createRecord('food', {
         isAvailable: false,
