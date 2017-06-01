@@ -1,9 +1,10 @@
-<li class="{{if food.isAvailable '' 'not-available'}}">
+<div class="{{if food.isAvailable '' 'not-available'}}">
   <div {{action 'toggleOpen'}}>{{food.name}} {{if isOpen 'V' '>'}}</div>
   {{#if isOpen}}
+    {{food.description}}
     {{#link-to 'foods.food' food.id}}<button>Show page</button>{{/link-to}}
     <button {{action 'toggleAvailablity' food}}>
       {{if food.isAvailable 'Make Unavailable' 'Make Available'}}
     </button>
   {{/if}}
-</li>
+</div>
