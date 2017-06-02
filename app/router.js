@@ -16,7 +16,9 @@ Router.map(function() {
   });
   this.route('about');
   this.route('contact');
-  this.route('restaurants');
+  this.route('restaurants', function() {
+    this.route('restaurant', {path: ':restaurant_id'});
+  });
 });
 
 export default Router;
