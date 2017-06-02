@@ -1,1 +1,14 @@
-<p>Thanks for visiting the {{pageName}} page at Menu Tracker. You can email me at jeffrey@emberschool.com</p>
+<div class="email-status">
+  <p>Thanks for visiting the {{pageName}} page at Menu Tracker. You can email me at jeffrey@emberschool.com</p>
+
+  {{yield 'hello' 'world'}}
+
+  {{!--
+  {{#if hasblock}}
+    <p>you're using a block component!</p>
+  {{else}}
+    <p>sorry, no block component</p>
+  {{/if}}
+  --}}
+
+</div>
