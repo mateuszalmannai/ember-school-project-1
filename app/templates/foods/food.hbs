@@ -1,5 +1,5 @@
 <h1>{{model.name}}</h1>
 <p>{{model.description}}</p>
-<img src={{model.imageUrl}} class="img-icon" /><br>
+{{icon-image src=model.imageUrl}}<br>
 {{link-to 'Edit this food' 'foods.food.edit' model}}
 <button {{action 'destroyItem' model}}>Destroy</button>
