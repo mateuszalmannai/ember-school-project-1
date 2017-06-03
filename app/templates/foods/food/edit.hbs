@@ -13,7 +13,7 @@
   {{#xs.option value="Dessert"}}Dessert{{/xs.option}}
 {{/x-select}}
 <br>
-{{#x-select value=model.food.restaurant action=(action (mut model.food.course)) as |xs|}}
+{{#x-select value=model.food.restaurant.content action="selectRestaurant" as |xs|}}
   {{#each model.restaurants as |restaurant|}}
     {{#xs.option value=restaurant}}
       {{restaurant.name}}
